@@ -404,9 +404,10 @@ Tampilannya seperti berikut.
             var email = document.getElementById("email").value;
             var alamat = document.getElementById("alamat").value;
             if (nama != "" && email != "" && alamat != ""){
+                alert('Anda Berhasil Mengisi Data Dengan Lengkap')
                 return true;
             } else {
-                alert('Isi Dengan Lengkap !');
+                alert('Isi Data Dengan Lengkap !');
                 return false;
             }
         }
@@ -414,7 +415,7 @@ Tampilannya seperti berikut.
 </head>
 <body>
     <div id="container">
-    <h2>Validasi Data Diri</h2>
+    <h2>Data Diri</h2>
         <form action="#" method="POST" onSubmit="return validasiform()">
             <div class="data">
                 <div>
@@ -427,9 +428,9 @@ Tampilannya seperti berikut.
                 </div>
                 <div>
                     <label for="alamat">Alamat :</label>
-                    <textarea name="alamat" id="alamat" cols="30" rows="7"></textarea>
+                    <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea>
                 </div>
-                <input type="submit" name="button1" id="button">
+                <button id="button" type="submit">Submit</button>
             </div>
         </form>
     </div>
@@ -448,10 +449,11 @@ body {
 }
 
 #container {
-    width: 50%;
-    margin: 0 auto;
+    padding: 20px;
+    width: 30%;
+    margin: 80px auto;
     border-radius: 4px;
-    background-color: #fff;
+    color: white;
 }
 
 h2 {
@@ -459,12 +461,8 @@ h2 {
     text-align: center;
 }
 
-label {
-    margin: 10px 0;
-}
-
 #nama, #email, #alamat {
-    margin: 5px 0 ;
+    margin: 10px auto ;
     width: 95%;
 }
 
@@ -477,13 +475,27 @@ label {
 }
 
 #button {
-    margin: 10px 0;
+    border: 0 solid black;
+    border-radius: 2px;
+    margin: 10px auto;
+    width: 97%;
     padding: 10px;
     color: white;
     background-color: rgb(0, 101, 253);
 }
+
+#button:hover{
+    background-color: rgb(0, 47, 117);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
 ```
 
-Tampilannya seperti berikut.
+Jika Mengisi dengan lengkap tampilannya seperti berikut.
 
-![Tugas](img/tugas.png)
+![DataBerhasil](img/datalengkap.png)
+
+JIka mengisi kurang lengkap tampilannya seperti berikut.
+
+![DataGagal](img/datakurang.png)

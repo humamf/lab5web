@@ -13,9 +13,10 @@
             var email = document.getElementById("email").value;
             var alamat = document.getElementById("alamat").value;
             if (nama != "" && email != "" && alamat != ""){
+                alert('Anda Berhasil Mengisi Data Dengan Lengkap')
                 return true;
             } else {
-                alert('Isi Dengan Lengkap !');
+                alert('Isi Data Dengan Lengkap !');
                 return false;
             }
         }
@@ -23,7 +24,7 @@
 </head>
 <body>
     <div id="container">
-    <h2>Validasi Data Diri</h2>
+    <h2>Data Diri</h2>
         <form action="#" method="POST" onSubmit="return validasiform()">
             <div class="data">
                 <div>
@@ -36,9 +37,9 @@
                 </div>
                 <div>
                     <label for="alamat">Alamat :</label>
-                    <textarea name="alamat" id="alamat" cols="30" rows="7"></textarea>
+                    <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea>
                 </div>
-                <input type="submit" name="button1" id="button">
+                <button id="button" type="submit">Submit</button>
             </div>
         </form>
     </div>

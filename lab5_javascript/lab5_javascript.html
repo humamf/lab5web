@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--File: daftar_menu.html//-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function validasiform() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var alamat = document.getElementById("alamat").value;
+            if (nama != "" && email != "" && alamat != ""){
+                return true;
+            } else {
+                alert('Isi Dengan Lengkap !');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+    <h2>Validasi Data Diri</h2>
+        <form action="#" method="POST" onSubmit="return validasiform()">
+            <div class="data">
+                <div>
+                    <label for="name">Nama :</label>
+                    <input type="text" name="name" id="nama">
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="alamat">Alamat :</label>
+                    <textarea name="alamat" id="alamat" cols="30" rows="7"></textarea>
+                </div>
+                <input type="submit" name="button1" id="button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
